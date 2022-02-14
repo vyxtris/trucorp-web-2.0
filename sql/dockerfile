@@ -1,0 +1,9 @@
+FROM mysql
+
+MAINTAINER me
+
+ENV MYSQL_DATABASE=trucorp \
+    MYSQL_ROOT_PASSWORD=kunci
+
+ADD trucorp-db.sql /docker-entrypoint-initdb.d
+EXPOSE 3306
